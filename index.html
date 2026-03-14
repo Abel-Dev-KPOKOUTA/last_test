@@ -363,12 +363,22 @@
 
     .hero-name {
       font-family: var(--font-h);
-      font-size: clamp(3rem, 9vw, 7.5rem);
+      font-size: clamp(2.2rem, 9vw, 7.5rem);
       font-weight: 800; line-height: .95;
       letter-spacing: -.04em; color: var(--white);
       margin-bottom: .3rem;
+      width: 100%;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
     .hero-name .ac { color: var(--accent2); }
+
+    @media (max-width: 480px) {
+      .hero-name {
+        font-size: clamp(2rem, 11vw, 3.5rem);
+        letter-spacing: -.02em;
+      }
+    }
 
     .hero-subtitle {
       font-family: var(--font-h);
@@ -1202,7 +1212,7 @@
               <div class="ci-icon">📧</div>
               <div>
                 <div class="ci-lbl">Email</div>
-                <div class="ci-val"><a href="mailto:kpokoutaabel@gmail.com">kpokoutaabel@gmail.com</a></div>
+                <div class="ci-val"><a href="/cdn-cgi/l/email-protection#b4dfc4dbdfdbc1c0d5d5d6d1d8f4d3d9d5ddd89ad7dbd9"><span class="__cf_email__" data-cfemail="f59e859a9e9a80819494979099b59298949c99db969a98">[email&#160;protected]</span></a></div>
               </div>
             </div>
             <div class="ci">
@@ -1306,7 +1316,7 @@
   <!-- ══════════════════════════════════
        JAVASCRIPT (SDK Supabase déjà chargé)
   ══════════════════════════════════ -->
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     /* ──────────────────────────────────
        ⚠️  SUPABASE CONFIG
        Remplace ces deux valeurs !
@@ -1519,10 +1529,3 @@
     });
 
     /* ──────────────────────────────────
-       FOOTER — année dynamique
-    ────────────────────────────────── */
-    document.getElementById('yr').textContent = new Date().getFullYear();
-  </script>
-
-</body>
-</html>
